@@ -1,0 +1,13 @@
+<h1>Friends#index</h1>
+
+<% @user_friends.each do |friend| %>
+  <%= friend.full_name %> has posted <%= friend.news_posts_count %> news posts.
+
+  Friends in common:
+
+  <% friend.friends_in_common.each do |common_friend| %>
+    <div>
+      <%= common_friend.full_name %> (<%= common_friend.news_posts_count %> posts)
+    </div>
+  <% end %>
+<% end %>
