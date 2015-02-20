@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :news_posts
+
   get 'friends/index'
 
   resources :users
